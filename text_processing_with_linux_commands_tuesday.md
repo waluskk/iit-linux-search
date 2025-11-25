@@ -18,9 +18,8 @@ Example: wc command is to count data in a given file. -l parameter is for counti
 ![task 1](task1.png)
 
 **Explanation:**
-
-grep is used to find the string "/login" in the file
-wc -l is used to count the lines in the output of grep command
+<br>grep is used to find the string "/login" in the file
+<br>wc -l is used to count the lines in the output of grep command
 
 ---
 
@@ -29,10 +28,10 @@ wc -l is used to count the lines in the output of grep command
 ![task 2](task2.png)
 
 **Explanation:** 
-cut -d "=" - cut command looks for the char "=" and splits the line there
--f 2 - cut parameter that specifies the need of the second part of the line (after "=")
-sort -u - sort command sorts the lines (-u means as unique)
-wc -l - wc command counts the lines that have left
+<br>cut -d "=" - cut command looks for the char "=" and splits the line there
+<br>-f 2 - cut parameter that specifies the need of the second part of the line (after "=")
+<br>sort -u - sort command sorts the lines (-u means as unique)
+<br>wc -l - wc command counts the lines that have left
 
 ---
 
@@ -41,10 +40,10 @@ wc -l - wc command counts the lines that have left
 ![task 3](task3.png)
 
 **Explanation:**
-cut -d " " - cut command looks for the char " " (in our case space) and splits the line there
--f 1 - cut parameter that specifies the first part of the line (first space after the name)
-sort -u - sort command sorts the lines (-u unique)
-wc -l - wc command counts the lines that have left
+<br>cut -d " " - cut command looks for the char " " (in our case space) and splits the line there
+<br>-f 1 - cut parameter that specifies the first part of the line (first space after the name)
+<br>sort -u - sort command sorts the lines (-u unique)
+<br>wc -l - wc command counts the lines that have left
 ---
 
 ### 4. Which age is most frequent in fullnames_with_age.txt?
@@ -52,12 +51,12 @@ wc -l - wc command counts the lines that have left
 ![task 4](task4.png)
 
 **Explanation:**
-cut -d "=" - cut command looks for the char "=" and splits the line there
--f 2 - cut parameter that specifies the second part of the line (after age=)
-sort - groups the similar numbers together
-uniq -c - joins the duplicates together and counts (-c parameter) (uniq only works when the numbers are close together)
-sort -n -r - sorts the lines numerically (-n) in reverse (-r), so the biggest value is at the top
-head -n 1 - gets only the first (-n 1) line (biggest number)
+<br>cut -d "=" - cut command looks for the char "=" and splits the line there
+<br>-f 2 - cut parameter that specifies the second part of the line (after age=)
+<br>sort - groups the similar numbers together
+<br>uniq -c - joins the duplicates together and counts (-c parameter) (uniq only works when the numbers are close together)
+<br>sort -n -r - sorts the lines numerically (-n) in reverse (-r), so the biggest value is at the top
+<br>head -n 1 - gets only the first (-n 1) line (biggest number)
 
 ---
 
@@ -66,13 +65,13 @@ head -n 1 - gets only the first (-n 1) line (biggest number)
 ![task 5](task5.png)
 
 **Explanation:**
-grep "FAIL" - grep command to only get lines with the string "FAIL"
-cut -d "," -f 2 - since this is CSV format, we split the line after the first comma (before name), and we get second field (before another comma)
-*then same commands as before*:
-sort - groups the similar names together
-uniq -c - joins the duplicates together and counts (-c parameter) (uniq only works when the names are close together)
-sort -n -r - sorts the lines numerically (-n) in reverse (-r), so the biggest value is at the top
-head -n 1 - gets only the first (-n 1) line (name with most "FAIL"s)
+<br>grep "FAIL" - grep command to only get lines with the string "FAIL"
+<br>cut -d "," -f 2 - since this is CSV format, we split the line after the first comma (before name), and we get second field (before another comma)
+<br>*then same commands as before*:
+<br>sort - groups the similar names together
+<br>uniq -c - joins the duplicates together and counts (-c parameter) (uniq only works when the names are close together)
+<br>sort -n -r - sorts the lines numerically (-n) in reverse (-r), so the biggest value is at the top
+<br>head -n 1 - gets only the first (-n 1) line (name with most "FAIL"s)
 
 
 ---
@@ -82,10 +81,10 @@ head -n 1 - gets only the first (-n 1) line (name with most "FAIL"s)
 ![task 6](task6.png)
 
 **Explanation:**
-grep "ok=true" - grep command to get lines which contain string "ok=true"
-wc -l - wc command to count the filtered out lines
+<br>grep "ok=true" - grep command to get lines which contain string "ok=true"
+<br>wc -l - wc command to count the filtered out lines
 
-*we could also use grep -c which would count the lines in one line"
+<br>*we could also use grep -c which would count the lines in one line"
 
 ---
 
@@ -94,13 +93,13 @@ wc -l - wc command to count the filtered out lines
 ![task 7](task7.png)
 
 **Explanation:**
-cut -d " " -f 2 - split the line at " " and get the second part
-cut -d "=" -f 2 - split the already split line at "=" (to only get the levels)
-*then the standard pipeline:*
-sort - groups the same error levels together
-uniq -c - joins the duplicates together and counts (-c parameter) (uniq only works when the names are close together)
-sort -nr - sorts the lines numerically in reverse (-nr)
-head -n 1 - gets only the first (-n 1) line (the most appearing error level)
+<br>cut -d " " -f 2 - split the line at " " and get the second part
+<br>cut -d "=" -f 2 - split the already split line at "=" (to only get the levels)
+<br>*then the standard pipeline:*
+<br>sort - groups the same error levels together
+<br>uniq -c - joins the duplicates together and counts (-c parameter) (uniq only works when the names are close together)
+<br>sort -nr - sorts the lines numerically in reverse (-nr)
+<br>head -n 1 - gets only the first (-n 1) line (the most appearing error level)
 
 ---
 
@@ -109,13 +108,13 @@ head -n 1 - gets only the first (-n 1) line (the most appearing error level)
 ![task 8](task8.png)
 
 **Explanation:**
-cut -d " " -f 5 - split the line after the fourth space (fifth part)
-cut -d "=" -f 2 - split the line to get the action
-*then the pipeline:*
-sort - groups the same actions together
-uniq -c - joins the duplicates together and counts (-c parameter)
-sort -nr - sorts the lines numerically in reverse (-nr)
-head -n 3 - shows the 3 values from the top (first 3 with most appearances)
+<br>cut -d " " -f 5 - split the line after the fourth space (fifth part)
+<br>cut -d "=" -f 2 - split the line to get the action
+<br>*then the pipeline:*
+<br>sort - groups the same actions together
+<br>uniq -c - joins the duplicates together and counts (-c parameter)
+<br>sort -nr - sorts the lines numerically in reverse (-nr)
+<br>head -n 3 - shows the 3 values from the top (first 3 with most appearances)
 
 ---
 
@@ -124,11 +123,11 @@ head -n 3 - shows the 3 values from the top (first 3 with most appearances)
 ![task 9](task9.png)
 
 **Explanation:**
-cat ... - cat command prints out the whole file into the stream
-tr -s ' ' - tr command squeezes the spaces into a single space
-cut -d ' ' -f 4 - splits the line after the third space (4th part)
-sort - groups the same users together
-uniq - joins the duplicates together
-wc -l - counts the lines
+<br>cat ... - cat command prints out the whole file into the stream
+<br>tr -s ' ' - tr command squeezes the spaces into a single space
+<br>cut -d ' ' -f 4 - splits the line after the third space (4th part)
+<br>sort - groups the same users together
+<br>uniq - joins the duplicates together
+<br>wc -l - counts the lines
 
 ---
