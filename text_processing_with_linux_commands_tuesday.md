@@ -120,17 +120,11 @@ wc -l - wc command to count the filtered out lines
 
 **Explanation:**
 
-cut -d " " -f 2 - split the line at " " and get the second part
-
-cut -d "=" -f 2 - split the already split line at "=" (to only get the levels)
-
-*then the standard pipeline:*
+grep -oE "INFO|WARN|ERROR" - grep command to get lines which contain "INFO", "WARN" or "ERROR"
 
 sort - groups the same error levels together
 
 uniq -c - joins the duplicates together and counts (-c parameter) (uniq only works when the names are close together)
-
-sort -nr - sorts the lines numerically in reverse (-nr)
 
 head -n 1 - gets only the first (-n 1) line (the most appearing error level)
 
@@ -143,11 +137,11 @@ head -n 1 - gets only the first (-n 1) line (the most appearing error level)
 
 **Explanation:**
 
+cat ... - cat command prints out the whole file into the stream
+
+tr -s ' ' - tr command squeezes the spaces into a single space
+
 cut -d " " -f 5 - split the line after the fourth space (fifth part)
-
-cut -d "=" -f 2 - split the line to get the action
-
-*then the pipeline:*
 
 sort - groups the same actions together
 
